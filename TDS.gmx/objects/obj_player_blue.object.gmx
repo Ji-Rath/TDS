@@ -36,7 +36,6 @@ image_speed = 0
 canshoot = true
 reloading = false
 timer = 0.2
-image_alpha = 0
 </string>
           </argument>
         </arguments>
@@ -82,11 +81,7 @@ image_alpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_alpha &lt; 1 {
-image_alpha += 0.05
-}
-
-//Point to Mouse
+            <string>//Point to Mouse
 image_angle = point_direction(x,y,mouse_x,mouse_y)
 
 //Basic Movement
