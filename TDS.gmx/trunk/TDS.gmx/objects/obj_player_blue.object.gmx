@@ -91,16 +91,16 @@ pressed_left = keyboard_check(ord("A"))
 pressed_right = keyboard_check(ord("D"))
 
 if(pressed_up &amp;&amp; place_free(x,vspeed)) {
-y += -2
+y += -3
 }
 if(pressed_down &amp;&amp; place_free(x,vspeed)) {
-y += 2
+y += 3
 }
 if(pressed_right &amp;&amp; place_free(hspeed,y)) {
-x += 2
+x += 3
 }
 if(pressed_left &amp;&amp; place_free(hspeed,y)) {
-x += -2
+x += -3
 }
 
 //Change to shooting when press lmb
