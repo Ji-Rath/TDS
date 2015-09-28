@@ -110,12 +110,13 @@ if(socket_has_error(opponentSocket)) {
 // This is just a single unsigned short which tells the position of his paddle.
 // We don't want to lag behind if we receive more than one in each frame, so
 // we'll just process as many messages as there are available.
-while(tcp_receive(opponentSocket, 8)) {
+while(tcp_receive(opponentSocket, 10)) {
     with(obj_player_2) {
         x = read_short(other.opponentSocket);
         y = read_short(other.opponentSocket);
         image_angle = read_short(other.opponentSocket);
         image_index = read_short(other.opponentSocket);
+        shooting = read_short(other.opponentSocket);
     }
 }
 </string>

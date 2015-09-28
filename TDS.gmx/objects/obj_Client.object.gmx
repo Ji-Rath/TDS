@@ -91,6 +91,7 @@ write_short(serverSocket, obj_player_2.x);
 write_short(serverSocket, obj_player_2.y);
 write_short(serverSocket, obj_player_2.image_angle);
 write_short(serverSocket, obj_player_2.image_index);
+write_short(serverSocket, obj_player_2.shooting);
 socket_send(serverSocket);
 </string>
           </argument>

@@ -31,6 +31,7 @@ self.pressed_up = false
 self.pressed_down = false
 self.pressed_right = false
 self.pressed_left = false
+shooting = false
 image_index = 0
 image_speed = 0
 canshoot = true
@@ -105,11 +106,25 @@ x += -2
 }
 
 //Change to shooting when press lmb
-if mouse_check_button(mb_left) {
-image_index = 1
-} else {
-image_index = 0
-}
+if shooting {
+    var i
+    image_index = 1
+    if image_index = 1 {
+        instance_create(x,y,obj_bullet_2)
+    }
+    if(canshoot = true) {
+        i = instance_create(x,y,obj_bullet_2)
+        i.image_angle = image_angle + random_range(-5,5)
+        i.direction = direction
+        i.speed = 32
+        canshoot = false
+        alarm[0] = timer * room_speed
+        }
+    else
+    {
+        image_index = 0
+    }
+    }
 }
 </string>
           </argument>
@@ -133,13 +148,7 @@ image_index = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_Client) {
-if(canshoot = true) {
-    instance_create(x,y,obj_bullet_2)
-    canshoot = false
-    alarm[0] = timer * room_speed
-}
-}
+            <string>shooting = true
 </string>
           </argument>
         </arguments>
