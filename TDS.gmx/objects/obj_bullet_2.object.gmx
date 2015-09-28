@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = obj_player + random_range(-5,5)
+            <string>image_angle = obj_player_2 + random_range(-5,5)
 image_alpha = 0.1
 </string>
           </argument>
@@ -58,7 +58,7 @@ image_alpha += 0.1
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player_2">
+    <event eventtype="4" ename="obj_wall">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -74,7 +74,7 @@ image_alpha += 0.1
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>
         <id>203</id>

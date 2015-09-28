@@ -103,6 +103,7 @@ if(pressed_left &amp;&amp; place_free(hspeed,y)) {
 x += -2
 }
 
+
 //Change to shooting when press lmb
 if mouse_check_button(mb_left) {
 image_index = 1
